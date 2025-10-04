@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+html{
+    font-size: 67.5%;
+}
+
+body{
+    background-color: #000000;
+    color:white;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 1rem;
+    color: #592ada;
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: #A7AAE1;
+    margin-left: 4rem;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #592ada;
+    border-bottom: 3px solid #f5f3d8;
+}
+
+@media (max-width:300px){
+    nav {
+        display: none;
+        position: absolute;  
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        border-bottom-left-radius: 2rem;
+        background-color: #000000;
+        border-top: 0.1rem solid #000000;
+    }   
+
+    nav.active {
+    display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, 
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.rem solid white;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9%; 
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    background-color: #000000;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #592ada;
+}
+
+.home .home-content h3{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem
+}
+
+.home-content p{
+    font-size: 1rem;
+}
+
+.home-img{
+    border-radius: 50%;
+
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 0 25px solid #000000; 
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.sosial-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: transparent;
+    border: 0.2rem solid #A7AAE1;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #592ada;
+}
+
+.sosial-icons a:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.3) translateY(-0.5px);
+    background-color: #161616;
+    box-shadow: 0 0 25px white;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #000000;
+    border: 4rem;
+    border-radius: 4rem;
+    font-size: 1rem;
+    color: #592ada;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #A7AAE1;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px white;
+    transition: 0.3s ease;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Beginner Web Developer";
+    color: white;
+    animation: words 20s infinite;
+    color: #592ada;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #000000;
+    animation: cursor 0.7s infinite;
+    right: -8;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid white;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Octo.";
+    }
+    21%, 40%{
+        content: "Gamer.";
+    }
+    41%, 60%{
+        content: "Designer.";
+    }
+    61%, 80%{
+        content: "Web Designer.";
+    }
+    81%, 100%{
+        content: "Student.";
+    }
+} 
+
+@media (max-width:1000px){
+    .home{
+    gap: 4rem
+    }
+}
+
+@media (max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+@media (max-width:450px){
+    .home .home-content h1{
+        font-size: 3.5rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2rem;
+    }
+}
+@media (max-width:350px){
+    .home .home-content h1{
+        font-size: 2.5rem;
+    }
+
+    .home .home-content h3{
+        font-size: 1.5rem;
+    }
+}
